@@ -3,9 +3,10 @@ package com.khy.hex.kafka.adapter.in.dto;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
-public class OrderDto {
+public class ReqOrderDto {
     private Long orderId;
     private Long customerId;
     private Long productId;

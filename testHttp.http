@@ -1,0 +1,13 @@
+
+### Send Post request
+POST http://localhost:8081/kafka
+Content-Type: application/json
+
+{
+  "customerId": 3003,
+  "orderId": 30001,
+  "productId": 10,
+  "amount": 3300,
+  "shippingAddress": "seoul jongro-gu",
+  "currentState": "ORDER_CANCEL_REQUEST"
+}
