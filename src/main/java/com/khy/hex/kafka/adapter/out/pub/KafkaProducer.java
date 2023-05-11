@@ -23,7 +23,7 @@ import org.springframework.util.concurrent.ListenableFuture;
 @AllArgsConstructor
 public class KafkaProducer implements KafkaOutPort {
 
-    private final static String PRODUCE_TOPIC = "discount-response-v1";
+    private final static String PRODUCE_TOPIC = "discount-request-v1";
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 

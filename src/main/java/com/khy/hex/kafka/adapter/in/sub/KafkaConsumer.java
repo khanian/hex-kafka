@@ -19,8 +19,8 @@ import org.springframework.stereotype.Component;
 public class KafkaConsumer {
 
     private static final String CONSUME_TOPIC = "discount-request-v1";
-
-    //private static final String GROUP_ID = "state-consumer-group-id";
+    private static final String GROUP_ID = "state-consumer-group-id";
+    private static final String CONCURRENCY_NUMBER = "2";       // number of threads
 
     private final KafkaUseCase kafkaUseCase;
 
@@ -31,7 +31,7 @@ public class KafkaConsumer {
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
 
-    @KafkaListener(topics = CONSUME_TOPIC)
+    @KafkaListener(topics = CONSUME_TOPIC, groupId = GROUP_ID, concurrency = CONCURRENCY_NUMBER)
     public void recordListener(String jsonMessage) {
         try {
             ReqOrderDto reqOrderDto = objectMapper.readValue(jsonMessage, ReqOrderDto.class);

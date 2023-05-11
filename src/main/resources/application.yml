@@ -3,16 +3,7 @@ server:
 
 spring:
   kafka:
-    consumer:
-      bootstrap-servers: localhost:9092
-      #bootstrap-servers: kafka1:19092,kafka2:29092,kafka3:39092
-      group-id: state-consumer-group-id
-      #auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    producer:
-      bootstrap-servers: localhost:9092
-      #bootstrap-servers: kafka1:19092,kafka2:29092,kafka3:39092
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-
+#    bootstrap-servers: b-1.ssp2pilotmskclust.1uyf1j.c3.kafka.ap-northeast-2.amazonaws.com:9096,b-2.ssp2pilotmskclust.1uyf1j.c3.kafka.ap-northeast-2.amazonaws.com:9096
+#    bootstrap-servers: localhost:9092
+#    bootstrap-servers: kafka1:19092,kafka2:29092,kafka3:39092
+    bootstrap-servers: 100.64.106.137:9096

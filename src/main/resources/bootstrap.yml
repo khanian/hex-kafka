@@ -1,0 +1,7 @@
+aws:
+  secretsmanager:
+    name: AmazonMSK_ssp
+cloud:
+  aws:
+    region:
+      static: ap-northeast-2
